@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<!-- Gosmac -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description"
+        content="Hello! I am Tarık Sefa Kaya. I am a learner full-stack web developer from Turkey.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+
+    <title>Gosmac</title>
+</head>
+
+<body>
+
+    <section class="flex items-center justify-center mt-5 md:mt-0 flex-col space-y-10" >
+
+        <div class=" bg-emerald-700 flex-col md:flex-row md:h-80 rounded-3xl relative items-center flex p-5">
+
+            <img src="me.jpg" width="300" class="rounded-full shadow shadow-gray-700" alt="">
+
+            <div class="flex flex-col mx-10 items-center my-3 h-full md:w-96 justify-center">
+                <h1 class="font-bold text-4xl">Tarık Sefa Kaya</h1>
+                <div class="grow my-3 flex h-40 md:h-max flex-col border-2 p-2 border-emerald-600 w-full rounded">
+
+                    <span class="text-lg">
+                        Hello! I am a learner full-stack web developer from <strong>Turkey</strong> .
+                    </span>
+                    <div class="h-full flex items-center space-x-5 justify-center">
+                        <a class="social-link" href="https://github.com/Gosmacx" target="_blank">
+                            <i class="fa-brands text-current fa-github fa-2xl"></i>
+                        </a>
+                        <a class="social-link" href="https://twitter.com/tariksefa" target="_blank">
+                            <i class="fa-brands text-current fa-twitter fa-2xl"></i>
+                        </a>
+                        <a class="social-link" href="https://discord.com/users/431823663075950602" target="_blank">
+                            <i class="fa-brands text-current fa-discord fa-2xl"></i>
+                        </a>
+                        <a class="social-link" href="mailto:gosmac@hotmail.com">
+                            <i class="fa-solid fa-envelope fa-2xl"></i>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="md:w-[804px] relative rounded-3xl md:h-96 p-2 bg-emerald-700">
+            <span class="text-3xl font-bold text-center block">Skills</span>
+            <div class="flex space-x-3 w-full items-center pb-5 md:pb-2 justify-center mt-2 flex-wrap">
+
+                <div class="skill">
+                    <img class="mb-[5px]"
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" />
+                    <span>Vuejs</span>
+                </div>
+                <div class="skill">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" />
+                    <span>Nodejs</span>
+                </div>
+                <div class="skill">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nuxtjs/nuxtjs-original.svg" />
+                    <span>Nuxt</span>
+                </div>
+                <div class="skill">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" />
+                    <span>React</span>
+                </div>
+                <div class="skill">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/electron/electron-original.svg" />
+                    <span>Electron</span>
+                </div>
+                <div class="skill">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" />
+                    <span>Mongodb</span>
+                </div>
+                <div class="skill">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" />
+                    <span>Redis</span>
+                </div>
+                <div class="skill">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" />
+                    <span>Git</span>
+                </div>
+                <div class="skill">
+                    <img
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original-wordmark.svg" />
+                    <span>Tailwind</span>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <section id="repos" class="md:h-[750px] !mb-5 relative md:w-96 w-full bg-emerald-700 space-y-3 flex p-3 flex-col items-center rounded-3xl" >
+        <span class="text-3xl font-bold text-center block">Last Repostories</span>
+    </section>
+
+
+    <script>
+        const repoList = document.getElementById('repos');
+
+        fetch('https://api.github.com/users/Gosmacx/repos')
+        .then(response => response.json())
+        .then(data => {
+
+            if (!data || data?.length < 0) return;
+
+            for (item of data) {
+                if (!item.description || !item.language) continue;
+                const repo = document.createElement('div');
+                repo.classList.add('repo');
+                repo.innerHTML = `
+                <a id="name" href=${item.html_url} target="_blank" >${item.name}</a>
+                <span id="description" >${item.description}</span>
+                <span id="language" >${item.language}</span>
+                `;
+                repoList.appendChild(repo);
+                if (repoList.children.length > 5) break;
+            }
+        })
+    </script>
+
+</body>
+
+</html>
