@@ -1,135 +1,65 @@
-<!DOCTYPE html>
-<!-- Gosmac -->
-<html lang="en">
+<!doctype html>
+<html>
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description"
-        content="Hello! I am Tarık Sefa Kaya. I am a learner full-stack web developer from Turkey.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
-
-    <title>Tarık Sefa Kaya | Gosmac</title>
+    <link href="./style.css" rel="stylesheet">
+    <link rel="icon" href="assets/favicon.png">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <title>Tarık Sefa Kaya</title>
 </head>
 
-<body>
-
-    <section class="flex items-center justify-center mt-5 md:mt-0 flex-col space-y-10" >
-
-        <div class=" bg-emerald-700 flex-col md:flex-row md:h-80 rounded-3xl relative items-center flex p-5">
-
-            <img src="tarik-sefa-kaya.jpg" width="300" class="rounded-full shadow shadow-gray-700" alt="Tarık Sefa Kaya">
-
-            <div class="flex flex-col mx-10 items-center my-3 h-full md:w-96 justify-center">
-                <h1 class="font-bold text-4xl">Tarık Sefa Kaya</h1>
-                <div class="grow my-3 flex h-40 md:h-max flex-col border-2 p-2 border-emerald-600 w-full rounded">
-
-                    <span class="text-lg">
-                        Hello! I am a learner full-stack web developer from <strong>Turkey</strong> .
-                    </span>
-                    <div class="h-full flex items-center space-x-5 justify-center">
-                        <a class="social-link" href="https://github.com/Gosmacx" target="_blank">
-                            <i class="fa-brands text-current fa-github fa-2xl"></i>
-                        </a>
-                        <a class="social-link" href="https://twitter.com/tariksefa" target="_blank">
-                            <i class="fa-brands text-current fa-twitter fa-2xl"></i>
-                        </a>
-                        <a class="social-link" href="https://www.linkedin.com/in/tarık-sefa-kaya-bba070188/" target="_blank">
-                            <i class="fa-brands text-current fa-linkedin fa-2xl"></i>
-                        </a>
-                        <a class="social-link" href="mailto:gosmac@hotmail.com">
-                            <i class="fa-solid fa-envelope fa-2xl"></i>
-                        </a>
-                    </div>
-
-                </div>
-            </div>
-
+<body class="bg-gray-950 flex flex-1 items-center justify-center w-full h-screen">
+    <span class="absolute font-semibold text-red-500 text-7xl" >JUST DEV.</span>
+    <div id="block" class="lg:h-[45%] h-[60%] lg:w-[40%] w-[89%] bg-white rounded-3xl shadow-md shadow-black relative transition-all duration-300 flex items-center p-3 justify-between gap-3">
+        <div id="button" class="absolute right-4 top-3 bg-gray-950 rounded-full w-7 h-7 flex items-center justify-center hover:opacity-55 transition-all cursor-pointer" >
+            <img src="assets/visibility.svg" >
         </div>
-
-        <div class="md:w-[804px] relative rounded-3xl md:h-96 p-2 bg-emerald-700">
-            <span class="text-3xl font-bold text-center block">Skills</span>
-            <div class="flex space-x-3 w-full items-center pb-5 md:pb-2 justify-center mt-2 flex-wrap">
-
-                <div class="skill">
-                    <img class="mb-[5px]"
-                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" />
-                    <span>Vuejs</span>
-                </div>
-                <div class="skill">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" />
-                    <span>Nodejs</span>
-                </div>
-                <div class="skill">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nuxtjs/nuxtjs-original.svg" />
-                    <span>Nuxt</span>
-                </div>
-                <div class="skill">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" />
-                    <span>React</span>
-                </div>
-                <div class="skill">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/electron/electron-original.svg" />
-                    <span>Electron</span>
-                </div>
-                <div class="skill">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" />
-                    <span>Mongodb</span>
-                </div>
-                <div class="skill">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" />
-                    <span>Redis</span>
-                </div>
-                <div class="skill">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" />
-                    <span>Git</span>
-                </div>
-                <div class="skill">
-                    <img
-                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original-wordmark.svg" />
-                    <span>Tailwind</span>
-                </div>
-
+        
+        <img src="assets/tariksefa.jpg" alt="" class="w-28 h-28 rounded-3xl object-cover">
+        <div class="flex-1 flex-row" >
+            <h1 class="font-semibold" >Tarık Sefa Kaya</h1>
+            <hr>
+            <span>Her geçen gün kendimi her konuda geliştirmeye çalışıyor, dijital çözümler üretiyorum.</span>
+            <div class="flex flex-wrap gap-2 mt-2">
+                <span class="bg-gray-100 px-3 py-1 rounded-full text-sm font-medium">Software Developer</span>
+                <span class="bg-gray-100 px-3 py-1 rounded-full text-sm font-medium">Business Developer</span>
+            </div>
+            <div class="flex items-center gap-2 mt-4">
+                <a href="https://linkedin.com/in/tariksefa" target="_blank" class="hover:opacity-75 transition-all block">
+                    <img src="assets/linkedin.svg" alt="LinkedIn" class="text-black w-5 h-5">
+                </a>
+                <a href="https://instagram.com/tariksefa0" target="_blank" class="hover:opacity-75 transition-all block">
+                    <img src="assets/instagram.svg" alt="Instagram" class="text-black w-5 h-5">
+                </a>
+                <a href="https://twitter.com/tariksefa" target="_blank" class="hover:opacity-75 transition-all block">
+                    <img src="assets/twitter.svg" alt="Twitter" class="text-black w-5 h-5">
+                </a>
+                <a href="https://github.com/gosmacx" target="_blank" class="hover:opacity-75 transition-all block">
+                    <img src="assets/github.svg" alt="GitHub" class="text-black w-5 h-5">
+                </a>
             </div>
         </div>
-
-    </section>
-
-    <section id="repos" class="md:h-[750px] !mb-5 relative md:w-96 w-full bg-emerald-700 space-y-3 flex p-3 flex-col items-center rounded-3xl" >
-        <span class="text-3xl font-bold text-center block">Last Repostories</span>
-    </section>
+    </div>
 
 
     <script>
-        const repoList = document.getElementById('repos');
+        const button = document.getElementById('button');
+        const block = document.getElementById('block');
 
-        fetch('https://api.github.com/users/Gosmacx/repos')
-        .then(response => response.json())
-        .then(data => {
+        button.addEventListener('mouseover', () => {
+            block.style.opacity = '0.15';
+            document.title = "JUST DEV."
+        });
 
-            if (!data || data?.length < 0) return;
-
-            for (item of data) {
-                if (!item.description || !item.language) continue;
-                const repo = document.createElement('div');
-                repo.classList.add('repo');
-                repo.innerHTML = `
-                <a id="name" href=${item.html_url} target="_blank" >${item.name}</a>
-                <span id="description" >${item.description}</span>
-                <span id="language" >${item.language}</span>
-                `;
-                repoList.appendChild(repo);
-                if (repoList.children.length > 5) break;
-            }
-        })
+        button.addEventListener('mouseout', () => {
+            block.style.opacity = '1';
+            document.title = "Tarık Sefa Kaya"
+        });
     </script>
-
 </body>
+
+
 
 </html>
